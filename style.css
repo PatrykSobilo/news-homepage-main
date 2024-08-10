@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: hsl(236, 13%, 42%);
+  background-color: hsl(36, 100%, 99%);
+
+  padding: 3rem 2rem;
+  font-size: 15px;
+  font-family: "Inter";
+
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(236, 13%, 42%);
+}
+
+h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+}
+
+h3 a {
+  color: hsl(36, 100%, 99%);
+}
+
+small {
+  font-weight: 500;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid hsl(236, 13%, 42%);
+  height: 2px;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+/*-----------------------------------------------------*/
+/*First*/
+
+.firstPartOfThePage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.topMenuNavigationPaneUnorderedList {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.mobileMenuButtons {
+  display: none;
+}
+
+/*-----------------------------------------------------*/
+/*Second*/
+
+.secondPartOfThePage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.blocksImage {
+  grid-column: span 2;
+}
+
+.blocksImage img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.rightNewsPanelContainer {
+  background-color: hsl(240, 100%, 5%);
+  grid-row: span 2;
+  height: 100%;
+
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.boldedHeader {
+  color: hsl(240, 100%, 5%);
+  font-size: 1.25rem;
+  margin-top: -10%;
+}
+
+.headerDescriptionAndButton {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerDescription {
+  margin-bottom: 10%;
+}
+
+.readMoreButtonExecutive {
+  background-color: hsl(5, 85%, 63%);
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  border: 0;
+  letter-spacing: 2px;
+}
+
+.readMoreButtonExecutive:hover {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%)
+}
+
+/*-----------------------------------------------------*/
+/*Third*/
+
+.thirdPartOfThePage {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  column-gap: 1rem;
+}
+
+.footer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  grid-row: span 3;
+}
+
+.footerNumber {
+  color: hsl(5, 85%, 63%);
+  margin-top: -1%;
+  margin-bottom: 3%;
+  font-weight: 700;
+  font-size: x-large;
+}
+
+.footerLink a {
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+}
+
+.footerLink a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+
+@media(max-width: 900px) {
+  .secondPartOfThePage {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .thirdPartOfThePage {
+    flex-direction: column;
+  }
+
+  .boldedHeader {
+    margin-top: 0%;
+  }
+
+  .rightNewsPanelContainer {
+    padding-bottom: 5%;
+    margin-top: 5%;
+    order: 1;
+    width: 90%;
+  }
+
+  .topMenuNavigationPaneUnorderedList {
+    display: none;
+  }
+
+  .mobileMenuButtons {
+    display: block;
+  }
+
+  #closeMobileMenu {
+    display: none;
+  }
+
+  .menuButton {
+    display: block;
+    background: transparent;
+    border: 0;
+  }
+
+
+  .topMenuNavigationPaneUnorderedList {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s;
+    z-index: 2;
+  }
+
+  .topMenuNavigationPaneUnorderedList {
+    margin-top: 40%;
+    font-weight: 500;
+    font-size: x-large;
+  }
+
+  .topMenuElement li{
+    color: hsl(240, 100%, 5%);
+  }
+
+  #closeMobileMenu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+  }
+
+  .topMenuElement a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .topMenu.open .menuButton {
+    display: block;
+  }
+}
